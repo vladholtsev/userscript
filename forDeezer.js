@@ -27,14 +27,14 @@
     document.addEventListener('keydown', check);
 
     function check(e) {
-        if (e.keyCode === 17) {
-            $('.control-repeat').click();
+        if (e.keyCode === 18) {
+            $('.control-repeat').click();/*alt*/
         } else if (e.keyCode === 37) {
-            $('.control-prev').click();
+            $('.control-prev').click();/*right arrow*/
         } else if (e.keyCode === 39) {
-            $('.control-next').click();
+            $('.control-next').click(); /*left arrow*/
         } else if (e.keyCode === 96) {
-            $('.control-shuffle').click();
+            $('.control-shuffle').click(); /*numpad zero*/
         }
     }
 })();
