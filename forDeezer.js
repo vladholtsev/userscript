@@ -1,9 +1,13 @@
-// ==UserScript== @name         for Deezer @namespace
-// http://tampermonkey.net/ @include     https://www.deezer.com/* @version
-// 0.1 @description  try to take over the world! @author       You @match
-// https://www.deezer.com/ru/profile/1935133242/loved @grant        none
-// @require
-// https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+// ==UserScript==
+// @name         for Deezer
+// @namespace    http://tampermonkey.net/
+// @include     https://www.deezer.com/*
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://www.deezer.com/ru/profile/1935133242/loved
+// @grant        none
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 // ==/UserScript==
 
 (function () {
@@ -21,6 +25,7 @@
     }, 700);
 
     document.addEventListener('keydown', check);
+
     function check(e) {
         if (e.keyCode === 17) {
             $('.control-repeat').click();
