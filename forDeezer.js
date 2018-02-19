@@ -16,9 +16,7 @@
         //hedi-unnecessary
         $(".download-app").hide();
         $(".subscribe").hide();
-        $(".svg-icon-app")
-            .parent()
-            .hide();
+        $(".conversion-entrypoints").hide();
 
         //change-elements-form-and-style
         $(".search").css("padding", "0 10px");
@@ -28,9 +26,9 @@
 
     function check(e) {
         if (e.keyCode === 18) {
-            $('.control-repeat').click();/*alt*/
+            $('.control-repeat').click(); /*alt*/
         } else if (e.keyCode === 37) {
-            $('.control-prev').click();/*right arrow*/
+            $('.control-prev').click(); /*right arrow*/
         } else if (e.keyCode === 39) {
             $('.control-next').click(); /*left arrow*/
         } else if (e.keyCode === 96) {
