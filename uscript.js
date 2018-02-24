@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         uscript
 // @namespace    http://tampermonkey.net/
+// @include      https://www.deezer.com/*
 // @version      0.1
 // @description  starting point
 // @author       vladyslav.holtsev@gmail.com
