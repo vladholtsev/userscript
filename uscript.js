@@ -11,15 +11,32 @@
 
 (function () {
     'use strict';
-    setTimeout(() => {
-        //hedi-unnecessary
-        $(".download-app").hide();
-        $(".subscribe").hide();
-        $(".conversion-entrypoints").hide();
+    start();
 
-        //change-elements-form-and-style
-        $(".search").css("padding", "0 10px");
-    }, 700);
+    function start() {
+        setTimeout(() => {
+            // Hide unnecessary
+            $(".download-app").hide();
+            $(".subscribe").hide();
+            $(".conversion-entrypoints").hide();
+
+            //change-elements-form-and-style
+            $(".search").css("padding", "0 10px");
+
+            // Rload script when reload data on page
+            $(".nav-link, .profile, .search-submit")
+                .click(function () {
+                    start();
+                });
+            // Hover row with the song
+            $(".datagrid-row")
+                .hover(function () {
+
+                }, function () {
+
+                });
+        }, 700);
+    }
 
     document.addEventListener('keydown', check);
 
@@ -32,6 +49,12 @@
             $('.control-next').click(); /*left arrow*/
         } else if (e.keyCode === 40) {
             $('.control-shuffle').click(); /*down arrow*/
+        } else if (e.keyCode === 13) /*Enter*/ {
+            (function () {
+                setTimeout(() => {
+                    // For change page with Enter jump;
+                }, 300);
+            });
         }
     }
 })();
