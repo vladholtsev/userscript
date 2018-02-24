@@ -54,7 +54,7 @@
                 setTimeout(() => {
                     // For change page with Enter jump;
                 }, 300);
-            });
+            })();
         }
     }
 })();
