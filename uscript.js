@@ -23,22 +23,46 @@
 
             //change-elements-form-and-style
             $(".search").css("padding", "0 10px");
+            $(".datagrid-row").css("font-weight", "900");
+            $(".navbar-link").css("font-weight", "900");
+            $("#menu_search").css("background-color", "#EEEEEE");
+            $(".naboo-catalog").css("background-color", "#23232C");
+            $(".container").css("background-color", "#EEEEEE");
+            $(".datagrid").css("background-color", "#EEEEEE");
 
-            // Rload script when reload data on page
-            $(".nav-link, .profile, .search-submit")
-                .click(function () {
-                    start();
-                });
+            // Reload script when reload data on page
+            $(".nav-link, .profile, .search-submit").click(function () {
+                start();
+            });
+
+            //functions
+            $(".navbar-link, .dropdown-menu").click(function () {
+                setTimeout(() => {
+                    unstable();
+                }, 400);
+            });
+
             // Hover row with the song
-            $(".datagrid-row")
-                .hover(function () {
-
-                }, function () {
-
-                });
+            $(".datagrid-row").hover(function () {
+                $(this).css("background-color", "#CFD8DC");
+            }, function () {
+                $(this).css("background-color", "#EEEEEE");
+            });
         }, 700);
     }
+    window.onscroll = () => {
+        unstable();
+    };
 
+    function unstable() {
+        $(".datagrid-row").css("background-color", "#EEEEEE");
+        $(".datagrid-row").css("font-weight", "900");
+        $(".datagrid-row").hover(function () {
+            $(this).css("background-color", "#CFD8DC");
+        }, function () {
+            $(this).css("background-color", "#EEEEEE");
+        });
+    }
     document.addEventListener('keydown', check);
 
     function check(e) {
